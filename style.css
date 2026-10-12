@@ -1,1 +1,362 @@
+/* =========================================
+   PIZZARETTO — BLACK TECH
+   DESIGN MODERNO PREMIUM
+========================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --vermelho: #D62828;
+  --vermelho-escuro: #B71C1C;
+  --creme: #FFF8F2;
+  --branco: #FFFFFF;
+  --preto: #222222;
+  --cinza: #666666;
+  --borda: #F0E7E1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--branco);
+  color: var(--preto);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho {
+  width: 100%;
+  padding: 22px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: white;
+  border-bottom: 1px solid var(--borda);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--vermelho);
+}
+
+.cabecalho nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.cabecalho nav a {
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cabecalho nav a:hover {
+  color: var(--vermelho);
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--vermelho);
+  color: white;
+  padding: 13px 25px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background: var(--vermelho-escuro);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(214, 40, 40, 0.18);
+}
+
+/* =========================================
+   HERO — APRESENTAÇÃO
+========================================= */
+
+.hero {
+  min-height: 520px;
+  padding: 85px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  background: var(--creme);
+}
+
+.hero-texto {
+  max-width: 560px;
+}
+
+.destaque {
+  display: inline-block;
+  background: #FFE8E1;
+  color: var(--vermelho);
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  color: var(--cinza);
+  font-size: 16px;
+  max-width: 450px;
+  margin-bottom: 30px;
+}
+
+.hero-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  background: linear-gradient(135deg, #FFE8D8, #FFD2BD);
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(100, 40, 20, 0.08);
+}
+
+.pizza-ilustracao {
+  font-size: 180px;
+  transition: transform 0.5s;
+}
+
+.hero-imagem:hover .pizza-ilustracao {
+  transform: rotate(12deg) scale(1.08);
+}
+
+/* =========================================
+   CARDÁPIO
+========================================= */
+
+.cardapio {
+  padding: 100px 8%;
+  background: white;
+}
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.titulo-secao span {
+  color: var(--vermelho);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.titulo-secao h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  margin: 10px 0;
+  letter-spacing: -1px;
+}
+
+.titulo-secao p {
+  color: var(--cinza);
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.produto {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.produto:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.produto-imagem {
+  height: 210px;
+  background: var(--creme);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 95px;
+}
+
+.produto h3 {
+  font-size: 19px;
+  margin: 22px 22px 8px;
+}
+
+.produto p {
+  font-size: 14px;
+  color: var(--cinza);
+  margin: 0 22px 20px;
+}
+
+.produto button {
+  margin: 0 22px 25px;
+  padding: 12px 20px;
+  width: calc(100% - 44px);
+  border-radius: 9px;
+  background: #F5F5F5;
+  color: #999;
+  border: none;
+  font-weight: 700;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   CONTATO
+========================================= */
+
+.contato {
+  padding: 90px 8%;
+  text-align: center;
+  background: var(--creme);
+}
+
+.contato h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  margin-bottom: 15px;
+}
+
+.contato p {
+  color: var(--cinza);
+  margin-bottom: 30px;
+}
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+  background: #1C1C1C;
+  color: #CCCCCC;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .cabecalho {
+    padding: 18px 5%;
+    flex-wrap: wrap;
+  }
+
+  .cabecalho nav {
+    gap: 15px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 65px 6%;
+    gap: 40px;
+  }
+
+  .hero-texto {
+    max-width: 100%;
+  }
+
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .cabecalho {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cabecalho nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cabecalho > .botao {
+    display: none;
+  }
+
+  .hero {
+    padding: 50px 6%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-imagem {
+    min-height: 250px;
+  }
+
+  .pizza-ilustracao {
+    font-size: 130px;
+  }
+
+  .cardapio {
+    padding: 70px 6%;
+  }
+
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .contato {
+    padding: 70px 6%;
+  }
+
+}
