@@ -360,3 +360,78 @@ footer {
   }
 
 }
+/* ==========================================
+   PESQUISA E FILTROS — PIZZARETTO
+========================================== */
+
+.cardapio-controles {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.pesquisa-container {
+  max-width: 550px;
+  margin: 0 auto 30px;
+}
+
+.pesquisa-container input {
+  width: 100%;
+  padding: 17px 22px;
+  border: 1px solid #E8E1DC;
+  border-radius: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+  background: #FFF;
+}
+
+.pesquisa-container input:focus {
+  border-color: #D62828;
+  box-shadow: 0 0 0 4px rgba(214, 40, 40, 0.08);
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filtro {
+  padding: 12px 20px;
+  border: 1px solid #F0E7E1;
+  border-radius: 30px;
+  background: #FFF8F2;
+  color: #444;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filtro:hover {
+  border-color: #D62828;
+  color: #D62828;
+}
+
+.filtro.ativo {
+  background: #D62828;
+  color: white;
+  border-color: #D62828;
+  box-shadow: 0 5px 15px rgba(214, 40, 40, 0.15);
+}
+
+@media (max-width: 600px) {
+
+  .filtros {
+    gap: 8px;
+  }
+
+  .filtro {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+}
